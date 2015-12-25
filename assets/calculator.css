@@ -5,4 +5,45 @@
 
 
 /* CSS rules go here */
+#myCalculator main{
+	background-color: #444;
+}
+#myCalculator main section{
+	width: 25%;
+	float: left;
+	text-align: center;
+	padding-top: 110px;
+	color: #ffffff;
+	background-repeat: no-repeat;
+	background-position: center 5px;
+	background-size: 63px 100px;
+}
 
+#myCalculator main::after{
+	content:'';
+	display: block;
+	clear: both;
+}
+
+.inc{ background-color: #ba2d2d; background-image: url(images/bulb_inc.svg);}
+.hal{ background-color: #2ecc71; background-image: url(images/bulb_hal.svg);}
+.cfl{ background-color: #2980b9; background-image: url(images/bulb_cfl.svg);}
+.led{ background-color: #f39c12; background-image: url(images/bulb_led.svg);}
+
+section > div { padding: 5px 0; background-color: rgba(0,0,0,.15);  }
+main h4 {
+	font-family: 'Open Sans Condensed', san-serif; 
+	font-size: 1em;
+	letter-spacing: 1px;
+	margin: 0 0 5px 0;
+	text-transform: uppercase;
+	
+
+}
+
+main p {margin: 0; font-size: 1.5em; font-weight: 700;}
+main p + p {margin: 0; font-size: 1em; font-weight: 300;}
+
+#myCalculator main p::after{ content:'w'; }
+#myCalculator main p + p::before{ content:'$'; }
+#myCalculator main p + p::after{ content:'per year'; color: rgba(255,255,255,.5); padding-left: 4px; }
